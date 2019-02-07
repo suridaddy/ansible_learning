@@ -1,0 +1,13 @@
+For Mac OSX
+
+1, 安装
+  sudo easy_install pip
+  sudo pip install ansible
+
+2, 配置ssh key
+  将管理节点的public Key添加到托管节点的authorized_keys中，以免重复输入密码：
+  ssh-copy-id -i .ssh/id_rsa.pub root@9.111.216.59
+  ssh-agent
+  ssh-add .ssh/id_rsa
+
+  ssh root@9.111.216.59 // 直接登陆，不再需要输入密码
